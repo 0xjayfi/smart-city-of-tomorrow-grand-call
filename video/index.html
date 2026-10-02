@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI for Smart Cities of Tomorrow</title>
+<meta name="description" content="A 30-second film of the A*STAR/RGC joint proposal: AI residents for policy evaluation in Hong Kong and Singapore.">
+<link rel="stylesheet" href="./styles.css">
+<script type="importmap">
+{ "imports": {
+  "three": "../node_modules/three/build/three.module.js",
+  "three/addons/": "../node_modules/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="viewport">
+<div id="stage" aria-label="AI for Smart Cities of Tomorrow, 30-second film">
+  <canvas id="city" width="1920" height="1080"></canvas>
+  <div id="scrim-full" class="scrim"></div>
+  <div id="scrim-left" class="scrim"></div>
+  <div id="scrim-bottom" class="scrim"></div>
+  <div id="scrim-center" class="scrim"></div>
+
+  <!-- persistent chrome, mirrors the poster's navigation rail -->
+  <header id="rail">
+    <div class="rail-steps">
+      <span class="rail-dot"></span><span class="rail-name">01 Objectives</span><span class="rail-line"></span>
+      <span class="rail-dot"></span><span class="rail-name">02 Value beyond Phase 1</span><span class="rail-line"></span>
+      <span class="rail-dot"></span><span class="rail-name">03 Co-I role</span>
+    </div>
+    <div class="rail-title">A*STAR/RGC Joint Research Scheme · AI for Smart Cities of Tomorrow</div>
+  </header>
+
+  <!-- ───────────── 0 · Opening ───────────── -->
+  <section class="scene" id="s-open" data-start="0" data-end="7.0">
+    <div class="open-kicker">
+      <div class="mono-kicker" data-in="0.45" data-dur="1.3" data-fx="type" data-out="2.25">A*STAR / RGC Joint Research Scheme</div>
+      <div class="mono-kicker dim" data-in="1.0" data-dur="0.9" data-fx="type" data-out="2.25">Hong Kong · Singapore</div>
+    </div>
+    <h1 class="open-title" data-in="2.45" data-fx="words" data-stagger="0.09" data-out="4.2">AI for Smart Cities of <em>Tomorrow</em></h1>
+    <div class="open-lines">
+      <p class="open-line" data-in="4.35" data-fx="words">Robotaxis on the streets.</p>
+      <p class="open-line" data-in="4.75" data-fx="words">Drones in the air.</p>
+      <p class="open-q" data-in="5.3" data-fx="words" data-stagger="0.045">How do we test transport policy before it reaches the street?</p>
+    </div>
+  </section>
+
+  <!-- ───────────── 1 · The gap ───────────── -->
+  <section class="scene" id="s-gap" data-start="7.0" data-end="10.9">
+    <div class="content">
+      <div class="label" data-in="7.05">The gap</div>
+      <h2 class="h1" data-in="7.12" data-fx="words">Rule-based agents can’t anticipate the unfamiliar.</h2>
+      <p class="sub" data-in="7.45">Conventional traveller agents follow predefined rules and cannot capture adaptive decisions under unfamiliar technologies and policies.</p>
+      <div class="sims">
+        <figure class="card sim" data-in="7.55">
+          <div class="sim-head"><span class="key key-grey"></span><span class="sim-name">Conventional agent</span><span class="sim-tag">Predefined rule</span></div>
+          <svg id="sim-rule" viewBox="0 0 800 262" aria-hidden="true"></svg>
+          <div class="sim-foot" data-in="8.45">Keeps to its rule when a new option appears</div>
+        </figure>
+        <figure class="card sim sim-ai" data-in="7.7">
+          <div class="sim-head"><span class="key key-amber"></span><span class="sim-name">AI resident</span><span class="sim-tag">LLM-based agent</span></div>
+          <svg id="sim-ai" viewBox="0 0 800 262" aria-hidden="true"></svg>
+          <div class="sim-foot" data-in="8.6">Reasons about the new option and adapts</div>
+        </figure>
+      </div>
+      <p class="statement" data-in="9.15" data-fx="words" data-stagger="0.03">This project replaces them with <b>AI residents</b>: LLM-based agents that reason and adapt like real travellers.</p>
+    </div>
+    <div class="source" data-in="7.6">Source: joint proposal (A*STAR/RGC 1, Sep 2026), Part II §1 Scientific Abstract, §4 Problem Statement. Agent motion is illustrative, not a result.</div>
+  </section>
+
+  <!-- ───────────── 2 · The approach ───────────── -->
+  <section class="scene" id="s-approach" data-start="10.9" data-end="15.7">
+    <div class="content">
+      <div class="label" data-in="10.95">The approach</div>
+      <h2 class="h1" data-in="11.0" data-fx="words">Simulate, diagnose, self-correct.</h2>
+      <p class="sub" data-in="11.3">AI residents are embedded in the existing HKSim and Singapore island-wide simulators. Calibration agents diagnose behavioural discrepancies that affect policy estimates, correct them and re-evaluate the simulation.</p>
+      <div class="approach-grid">
+        <div class="card loop-card" data-in="11.35"><svg id="loop" viewBox="0 0 880 400" aria-hidden="true"></svg></div>
+        <div class="card outcomes" data-in="12.45">
+          <div class="label">Expected outcomes</div>
+          <ol>
+            <li data-in="12.6"><span class="num">1</span><div><b>A scalable agentic simulation system</b><span>Balanced cost and fidelity: scale, computational cost and behavioural fidelity quantified.</span></div></li>
+            <li data-in="13.25"><span class="num">2</span><div><b>An agentic calibration system</b><span>Discrepancy discovery and self-improvement: diagnosis, targeted alignment and re-evaluation in a loop.</span></div></li>
+            <li data-in="13.9"><span class="num">3</span><div><b>An independent policy evaluation benchmark</b><span>Robotaxi and UAV cases in Hong Kong and Singapore. Models frozen before testing on held-out evidence.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="source" data-in="11.4">Source: joint proposal (A*STAR/RGC 1, Sep 2026), Part II §1 Scientific Abstract, §3 Objectives and Key Results.</div>
+  </section>
+
+  <!-- ───────────── 3 · Why now ───────────── -->
+  <section class="scene" id="s-timing" data-start="15.7" data-end="20.3">
+    <div class="content">
+      <div class="label" data-in="15.75">Why now</div>
+      <h2 class="h1" data-in="15.8" data-fx="words">Phase 1 coincides with deployment decisions.</h2>
+      <p class="sub" data-in="16.1">Public autonomous shuttle rides began in Punggol on 1 April 2026, and Waymo plans a commercial robotaxi service in Singapore in 2028. Phase 1 would deliver validated evidence as those services scale.</p>
+      <div class="card gantt-card" data-in="16.0">
+        <svg id="gantt" viewBox="0 0 1672 330" role="img" aria-label="Timeline 2026 to 2032: Phase 1 from August 2027 for 24 months overlaps Waymo's planned 2028 Singapore robotaxi launch; Phase 2 runs months 25 to 60 if selected."></svg>
+      </div>
+      <div class="chips" data-in="18.55">
+        <span class="chips-label">Phase 1 evaluates</span>
+        <span class="chip">Fleet size</span><span class="chip">Service coverage</span><span class="chip">Public-transport integration</span><span class="chip">Empty-vehicle management</span><span class="chip">Fares</span>
+        <span class="chips-note">under varying user-acceptance and operating-cost assumptions</span>
+      </div>
+    </div>
+    <div class="source" data-in="16.2">Sources: joint proposal, Part II §4, §6, §10, Section 3; Joint Call Guidelines 2026 (caps, start date); LTA news release, 4 Mar 2026; Waymo announcement, 18 Sep 2026.</div>
+  </section>
+
+  <!-- ───────────── 4 · Commitment vs programme ───────────── -->
+  <section class="scene" id="s-commit" data-start="20.3" data-end="24.1">
+    <div class="content">
+      <div class="label" data-in="20.35">Co-I commitment</div>
+      <h2 class="h1" data-in="20.4" data-fx="words">10% FTE. No departmental manpower.</h2>
+      <p class="sub" data-in="20.7">The Singapore PI, Prof. Atsushi Nitanda (CFAR), administers the grant. The Hong Kong team leads behavioural modelling, calibration and validation.</p>
+      <div class="commit-grid">
+        <div class="card commit-card" data-in="20.6">
+          <div class="label">Our department commits</div>
+          <div class="meter-row">
+            <svg id="meter" viewBox="0 0 220 220" role="img" aria-label="10 percent of one full-time equivalent"></svg>
+            <div class="meter-text">
+              <div class="big" id="meter-num">10%</div>
+              <div class="meter-cap">FTE over 24 months</div>
+              <div class="meter-note">Supervision and consultation on transport simulation and robotaxi policy evaluation</div>
+            </div>
+          </div>
+          <div class="zero-row" data-in="21.3">
+            <div class="big">0</div>
+            <div class="zero-text"><b>staff allocated from our department</b><span>The grant, and any staff it funds, is held by the PI’s institute (CFAR).</span></div>
+          </div>
+        </div>
+        <div class="card invest-card" data-in="20.85">
+          <div class="label">Alongside programme co-investment</div>
+          <div class="fund">
+            <div class="fund-head"><span class="fund-num" data-count="150000" data-prefix="S$" data-cin="21.0">S$150,000</span><span class="fund-cap">Singapore side, Phase 1 (cap)</span></div>
+            <svg class="fund-bar" id="fund-sg" viewBox="0 0 960 44" role="img" aria-label="Singapore side caps: Phase 1 up to S$150,000; Phase 2 up to S$300,000"></svg>
+          </div>
+          <div class="fund">
+            <div class="fund-head"><span class="fund-num" data-count="2770560" data-prefix="HK$" data-cin="21.25">HK$2,770,560</span><span class="fund-cap">Hong Kong side, over five years</span></div>
+            <svg class="fund-bar" id="fund-hk" viewBox="0 0 960 44" role="img" aria-label="Hong Kong request: Phase 1 HK$983,280; Phase 2 HK$1,787,280"></svg>
+          </div>
+          <div class="legend"><span class="sw sw-p1"></span>Phase 1 <span class="sw sw-p2"></span>Phase 2 (if selected) <span class="legend-note">Each bar is its own scale: currencies differ.</span></div>
+          <div class="res-row" data-in="22.0">
+            <div class="res"><b>1 + 1</b><span>PhD student and post-doctoral fellow, funded on the Hong Kong side</span></div>
+            <div class="res"><b>8 × H200</b><span>NVIDIA GPUs on a server the Hong Kong team already operates</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="source" data-in="20.8">Sources: joint proposal, Section 3 Project Funding; Part II §9, §10. Time commitment and manpower: Co-I declaration to the department.</div>
+  </section>
+
+  <!-- ───────────── 5 · Benefits ───────────── -->
+  <section class="scene" id="s-benefits" data-start="24.1" data-end="27.3">
+    <div class="content">
+      <div class="label" data-in="24.15">Benefits to the department</div>
+      <h2 class="h1" data-in="24.2" data-fx="words">What our department gains.</h2>
+      <div class="benefits">
+        <article class="card benefit" data-in="24.4">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="31" rx="4"/><path d="M7 19h34M16 6v8M32 6v8"/><path d="M15 27h4M22 27h4M29 27h4M15 33h4"/></svg>
+          <h3>A role in a joint programme</h3>
+          <p>Two years, up to five, in a Hong Kong–Singapore programme.</p>
+          <svg id="years" viewBox="0 0 330 54" aria-hidden="true"></svg>
+        </article>
+        <article class="card benefit" data-in="24.6">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 41 15 24 24 7 15Z"/><path d="M7 24l17 9 17-9"/><path d="M7 33l17 9 17-9"/></svg>
+          <h3>A validated, reusable framework</h3>
+          <p>Reusable on the department’s simulators, including SITEM.</p>
+        </article>
+        <article class="card benefit" data-in="24.8">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="13" cy="24" r="6"/><circle cx="35" cy="24" r="6"/><path d="M19 24h10"/><path d="M13 12V8M35 12V8M13 40v-4M35 40v-4"/></svg>
+          <h3>An established partner</h3>
+          <p>A Hong Kong collaborator for follow-on bids, and follow-on work with agencies such as LTA.</p>
+        </article>
+        <article class="card benefit" data-in="25.0">
+          <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 31l3-9a4 4 0 0 1 4-3h14a4 4 0 0 1 4 3l3 9"/><rect x="7" y="31" width="34" height="8" rx="3"/><circle cx="14" cy="35" r="1.5"/><circle cx="34" cy="35" r="1.5"/><path d="M24 6v6M18 9l2 3M30 9l-2 3"/></svg>
+          <h3>An early position</h3>
+          <p>In robotaxi policy evaluation, as Singapore services scale toward Waymo’s planned 2028 launch.</p>
+        </article>
+      </div>
+      <p class="statement italic" data-in="25.5" data-fx="words" data-stagger="0.035">Validated evidence would be available when deployment decisions are made.</p>
+    </div>
+    <div class="source" data-in="24.5">Sources: joint proposal, Part II §10 Pathways to Impact and Added value of Hong Kong–Singapore collaboration. LTA follow-on: project team.</div>
+  </section>
+
+  <!-- ───────────── 6 · Close ───────────── -->
+  <section class="scene" id="s-close" data-start="27.3" data-end="30">
+    <div class="close-wrap">
+      <div class="label" data-in="27.4" data-out="99">AI for Smart Cities of Tomorrow</div>
+      <h2 class="close-title" data-in="27.5" data-fx="words" data-stagger="0.1" data-out="99">Small grant, <em>front-row seat.</em></h2>
+      <div class="request" data-in="28.15" data-out="99">Request · Departmental support for a 10% FTE commitment through Phase 1</div>
+      <div class="credits" data-in="28.55" data-out="99">PolyU · Prof. Wei Ma, Hong Kong PI &nbsp;|&nbsp; A*STAR · Prof. Atsushi Nitanda, CFAR, Singapore PI · Dr Jie Song, IAIC, Co-I</div>
+    </div>
+  </section>
+
+  <div id="tooltip" role="tooltip"><div class="tt-title"></div><div class="tt-body"></div><div class="tt-src"></div></div>
+  <svg id="cursor" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 2 L4 22 L9.5 17 L13 25.5 L16.4 24 L12.9 15.8 L20.5 15.8 Z"/></svg>
+  <div id="ripple"></div>
+  <div id="progress"><span></span></div>
+  <div id="fade"></div>
+</div>
+</div>
+
+<button id="bigplay" type="button" hidden aria-label="Play the 30-second film">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+  <span>Play film · 0:30</span>
+</button>
+
+<div id="controls" hidden>
+  <button id="play" type="button" aria-label="Pause">
+    <svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>
+    <svg viewBox="0 0 24 24" class="i-play"><path d="M7 4.5v15l12-7.5z"/></svg>
+  </button>
+  <input id="scrub" type="range" min="0" max="30" step="0.01" value="0" aria-label="Seek">
+  <span id="clock">0:00 / 0:30</span>
+  <button id="sound" type="button" aria-pressed="false" aria-label="Turn sound on">
+    <svg viewBox="0 0 24 24" class="i-muted"><path d="M4 9h4l5-4v14l-5-4H4zM16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg viewBox="0 0 24 24" class="i-sound"><path d="M4 9h4l5-4v14l-5-4H4zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <nav id="chapters" aria-label="Chapters"></nav>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

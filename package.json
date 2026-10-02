@@ -1,0 +1,23 @@
+{
+  "name": "smart-city-of-tomorrow-grand-call",
+  "private": true,
+  "version": "1.0.0",
+  "description": "30-second video version of the A*STAR/RGC 'AI for Smart Cities of Tomorrow' grand-call poster",
+  "type": "module",
+  "scripts": {
+    "preview": "http-server -p 8080 -c-1 .",
+    "audio": "node scripts/soundtrack.mjs",
+    "render": "node scripts/render.mjs",
+    "build:web": "node scripts/build-web.mjs"
+  },
+  "dependencies": {
+    "three": "0.170.0",
+    "@fontsource/instrument-sans": "^5.1.0",
+    "@fontsource/instrument-serif": "^5.1.0",
+    "@fontsource/ibm-plex-mono": "^5.1.0"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1",
+    "http-server": "^14.1.1"
+  }
+}
